@@ -16,7 +16,10 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('swede.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Swede!');
+
+		let config = vscode.workspace.getConfiguration('swede');
+		let cliPath = config.get("cli.path");
+		vscode.window.showInformationMessage('Hello World from Swede! Path: ' + cliPath);
 	});
 
 	context.subscriptions.push(disposable);

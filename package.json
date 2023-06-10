@@ -20,7 +20,8 @@
           "swede"
         ],
         "extensions": [
-          ".speca"
+          ".speca",
+          ".swede"
         ]
       }
     ],
@@ -28,6 +29,20 @@
       {
         "command": "swede.helloWorld",
         "title": "Hello World"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Swede",
+        "properties": {
+          "swede.cliPath": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Path for swede cli"
+          }
+        }
       }
     ]
   },
