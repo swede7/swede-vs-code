@@ -44,20 +44,13 @@
             ],
             "description": "Path for swede cli"
           },
-          "swede.jdk.path": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "description": "Path for jdk"
-          },
           "swede.trace.server": {
             "type": [
               "string",
               "null"
             ],
             "description": "Debug lsp server"
-          } 
+          }
         }
       }
     ]
