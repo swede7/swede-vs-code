@@ -42,14 +42,14 @@
               "string",
               "null"
             ],
-            "description": "Path for swede cli"
+            "description": "Path for cli"
           },
-          "swede.jdk.path": {
+          "swede.cli.args": {
             "type": [
-              "string",
-              "null"
+              "array",
+              "string"
             ],
-            "description": "Path for jdk"
+            "description": "cli args"
           },
           "swede.trace.server": {
             "type": [

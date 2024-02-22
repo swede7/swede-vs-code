@@ -11,17 +11,22 @@ export class SwedeLanguageClient {
   init() {
     const config = vscode.workspace.getConfiguration("swede");
     const cliPath: string | undefined = config.get("cli.path");
+    const cliArgs: string[] | undefined = config.get("cli.args");
 
     if (!cliPath) {
       Logger.log("invalid cliPath");
       return;
     }
 
-    const args: string[] = ["lsp"];
+    
+    if (!cliPath) {
+      Logger.log("invalid cliArgs");
+      return;
+    }
 
     const serverOptions: ServerOptions = {
       command: cliPath,
-      args: args,
+      args: cliArgs,
       transport: TransportKind.stdio,
     };
 
